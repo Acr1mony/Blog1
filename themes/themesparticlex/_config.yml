@@ -1,0 +1,98 @@
+# Theme Github link: https://github.com/argvchs/hexo-theme-particlex
+# Developer: argvchs
+
+# avatar image url
+head_img: 
+
+# home page head info block
+head_block_enable: true
+
+# home page head background style
+home_background: https://bu.dusays.com/2022/09/05/6314d1342baca.jpg
+# WARNING! vf_fonts (variable fonts) feature is EXPERIMENTAL
+# MDN: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+vf_fonts_enable: false
+
+# ParticleX theme icon is adopts the font awesome 6
+# Link: https://fontawesome.com/search/
+
+# main menu navigation
+menu:
+    home:
+        name: house
+        theme: solid
+        src: /
+    archives:
+        name: box-archive
+        theme: solid
+        src: /archives
+    categories:
+        name: file
+        theme: solid
+        src: /categories
+    tags:
+        name: tags
+        theme: solid
+        src: /tags
+    # Example:
+    # <name>:
+    #     name: <icon-name>
+    #     theme: <icon-theme>
+    #     src: <link-url>
+
+# side info card
+card:
+    enable: true
+    description: ["一个努力学习和生活的人"] # You can add more
+    icon_links:
+        weibo:
+            name: weibo
+            theme: brands
+            link: https://weibo.com/u/5609582974
+        github:
+            name: github
+            theme: brands
+            link: https://github.com/Acr1mony
+        music:
+            name: soundcloud
+            theme: brands
+            link: https://music.163.com/#/user/home?id=65901446
+        500px:
+            name: 500px
+            theme: brands
+            link: https://500px.com.cn/ACPicture
+        # Example:
+        # <name>:
+        #    name: <icon-name>
+        #    theme: <icon-theme>
+        #    link: <link-url>
+    friend_links:
+        []
+        # Example:
+        # <name>: <link-url>
+
+# footer info
+footer:
+    since: 2021
+    # Customize the server domain name ICP
+    ICP:
+        enable: false
+        code:
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+    enable: false
+    clientID: # Default ClientID
+    clientSecret: # Default ClientSecret
+    repo: # The name of repository of store comments
+    owner: # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
+    language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
+    proxy: # CORS proxy
+    sites: # Sites
+        []
+        # Example:
+        # <www.example.com>:
+        #    clientID: <client-id>
+        #    clientSecret: <client-secret>
