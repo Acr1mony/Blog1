@@ -8,7 +8,7 @@ head_img:
 head_block_enable: true
 
 # home page head background style
-home_background: https://bu.dusays.com/2022/09/05/6314d1342baca.jpg
+home_background: https://bu.dusays.com/2022/09/12/631f15d6c2d67.jpg
 # WARNING! vf_fonts (variable fonts) feature is EXPERIMENTAL
 # MDN: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
 vf_fonts_enable: false
