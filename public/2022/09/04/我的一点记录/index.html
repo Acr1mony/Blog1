@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>关于网站新构架 我的一点记录 | ACのSite</title>
+        <meta name="author" content="Acr1mony">
+        <meta name="description" content="茫茫网络沧海中的一粟">
+        <meta name="keywords" content="Acr1mony">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">ACのSite</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-file fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;ACのSite</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-file fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>关于网站新构架 我的一点记录 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/9/4
+        </span>
+        
+        <span class="category">
+            <a href="/Categories/建站/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                建站
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/Tags/建站/" style="color: #03a9f4">
+                    建站
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <center><img src="https://bu.dusays.com/2022/09/05/6314dd6226c5e.jpg"></center>
+
+<br>
+　　这次没有继续沿用之前买的香港服务器，虽然有一台服务器是极好的，但是对于学生来说，似乎没有这么多财力去支持自己维持服务器。
+
+
+<center>于是，我选用了一种便宜的、更加适合我的博客建站结构。</center>
+
+<center>Netlify+Github+Cloudflare</center>
+
+<center>这应该是我建立博客的终极解决方案了。</center>
+
+<center>优点：“便宜、本地化编辑、锻炼代码能力”</center><center>缺点：“复杂、可视化程度低、访问稍慢”</center>
+
+<p>　　回顾一下我在建站当中遇到的困难，犯了很多简单的错，也学到了很多东西：</p>
+<h2 id="1-config配置时，冒号后忘记添加空格导致识别错误"><a href="#1-config配置时，冒号后忘记添加空格导致识别错误" class="headerlink" title="1.config配置时，冒号后忘记添加空格导致识别错误"></a>1.config配置时，冒号后忘记添加空格导致识别错误</h2><p>　　这是我<strong>最简单</strong>的错误，也是出现<strong>最多次</strong>的错误。其实不止是在Hexo的config配置文件中，写.ejs的网页文件中也出现了同样的问题，所以说，代码是需要<strong>严肃对待</strong>的，一个空格没有导致格式对不上都不行。</p>
+<h2 id="2-Cloudflare配置时忘记添加解析"><a href="#2-Cloudflare配置时忘记添加解析" class="headerlink" title="2.Cloudflare配置时忘记添加解析"></a>2.Cloudflare配置时忘记添加解析</h2><p>　　同样也是一个很愚蠢的错误，我的腾讯云服务器更改DNS服务器到Cloudflare后，在Cloudflare忘记添加从本域名到托管静态网站Netlify的CRANE域名转发，导致我自己感觉配置好了的服务却<strong>无法访问进入网站</strong>。这首先是因为在添加进Cloudflare时，网站的自动解析没有检测到我在原服务商的转发；其次就是因为我对这种CDN服务的原理理解模糊，才出现这种低级的错误。</p>
+<h2 id="3-头像链接超时导致网站访问速度慢"><a href="#3-头像链接超时导致网站访问速度慢" class="headerlink" title="3.头像链接超时导致网站访问速度慢"></a>3.头像链接超时导致网站访问速度慢</h2><p>　　也许这是对于我来说最有技术含量的排障——这一点让我困惑了很久，明明用着<strong>同样的构架</strong>，为什么我的网站进入速度比别人的博客总要<strong>慢不少</strong>？但当我挂上科学上网时，又几乎能秒开网址。刚开始我以为是因为我使用的是免费的Cloudflare加速服务，而别人为此付了费。但后来我打开<strong>开发者工具</strong>，切换到<strong>Network</strong>查看网站资源的调取情况时，发现我使用的argvchs大佬制作的主题中，读取头像调用的是avatar的url，但是在国内访问会出现timed out<strong>超时</strong>的情况，并且此主题下如果<strong>没有完整读取页面会一直在加载界面缓冲</strong>，最后我直接找到ejs源文件对头像的读取url进行了修改，使用了便宜的好用的付费图床<strong>去不图床</strong>，终于解决了这个<strong>严重影响网站访问</strong>的问题。</p>
+<p><font size="4">　　对于我来说，想要说的话不是这一篇文章就能写完，但可能大多都是我的抱怨之言吧。不过总而总之，这个博客也是能顺利的访问和发布内容了。其实我并没有什么资格能够做知识输出，所以非常感谢屏幕前的你能够耐心地看完这篇文章，<font color="red">非常感谢。</font></font></p>
+
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2021 - 2022 ACのSite
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Acr1mony
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a> Edit By <a target="_blank" rel="noopener" href="https://github.com/Acr1mony/">Acr1mony</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>
