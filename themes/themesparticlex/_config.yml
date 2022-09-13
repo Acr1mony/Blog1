@@ -18,19 +18,19 @@ vf_fonts_enable: false
 
 # main menu navigation
 menu:
-    home:
+    Home:
         name: house
         theme: solid
         src: /
-    archives:
+    Archives:
         name: box-archive
         theme: solid
         src: /archives
-    categories:
+    Categories:
         name: file
         theme: solid
         src: /categories
-    tags:
+    Tags:
         name: tags
         theme: solid
         src: /tags
