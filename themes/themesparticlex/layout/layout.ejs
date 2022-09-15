@@ -1,3 +1,8 @@
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+    $(document).pjax('a[target!=_blank]', '#pageContent', {fragment: '#pageContent'});
+</script>
 <% 
     var layout = "post";
     if (is_home())
@@ -45,6 +50,7 @@
         <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
     </head>
     <body>
+        <div id="pagecontent">
         <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="<%- rootlink %>loading.gif"></div></div></div></div></div>
         <div id="layout">
             <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
@@ -65,14 +71,35 @@
                 <img id="img_content" alt="img_show">
             </div>
         </div>
+        </div>
         <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
         <script src="<%- rootlink %>js/particlex.js"></script>
         <script src="<%- rootlink %>js/showimg.js"></script>
         <%- include("script") %>
     </body>
+    <div id="aplayercontent">
     <!--动态线条背景-->
 <script type="text/javascript"
 color="245,212,200" opacity='0.4' zIndex="-1" count="80" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
 </script>
+    <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
 
+    <meting-js 
+        server="netease" 
+        type="playlist" 
+        id="6988212289"
+        fixed="true"
+        autoplay="false"
+        loop="all"
+        order="random"
+        preload="auto"
+        list-folded="ture"
+        list-max-height="500px"
+        lrc-type="0">
+    </meting-js>
+    </div>
 </html>
