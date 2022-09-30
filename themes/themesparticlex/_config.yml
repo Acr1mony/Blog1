@@ -43,7 +43,7 @@ menu:
 # side info card
 card:
     enable: true
-    description: ["一个努力学习和生活的人"] # You can add more
+    description: ["物流/摄影/后期/音游"] # You can add more
     icon_links:
         weibo:
             name: weibo
