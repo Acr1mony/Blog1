@@ -34,6 +34,10 @@ menu:
         name: tags
         theme: solid
         src: /tags
+    Tools:
+        name: wrench
+        theme: solid
+        src: https://tools.acr1m.com/
     # Example:
     # <name>:
     #     name: <icon-name>
