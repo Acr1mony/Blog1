@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>今天起正式营业啦！ | ACのSite</title>
+        <title>今天起正式营业啦！ | AC的小窝</title>
         <meta name="author" content="Acr1mony">
         <meta name="description" content="茫茫网络沧海中的一粟">
         <meta name="keywords" content="Acr1mony">
@@ -31,7 +31,7 @@
 <nav id="menu">
     <div class="desktop-menu">
         <a href="/">
-            <span class="title">ACのSite</span>
+            <span class="title">AC的小窝</span>
         </a>
         
         <a href="/">
@@ -54,12 +54,17 @@
             <span>&ensp;Tags</span>
         </a>
         
+        <a target="_blank" rel="noopener" href="https://tools.acr1m.com/">
+            <i class="fa-solid fa-wrench fa-fw"></i>
+            <span>&ensp;Tools</span>
+        </a>
+        
     </div>
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
         <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
         <div :class="'title'" @click="menu_show = !menu_show">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;ACのSite</span>
+            <span>&emsp;AC的小窝</span>
         </div>
         <transition name="slide">
         <div class="items" v-show="menu_show">
@@ -100,6 +105,15 @@
                 </div>
             </a>
             
+            <a target="_blank" rel="noopener" href="https://tools.acr1m.com/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-wrench fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tools</div>
+                </div>
+            </a>
+            
         </div>
         </transition>
     </div>
@@ -127,7 +141,7 @@
             
             <span class="tag">
                 
-                <a href="/Tags/建站/" style="color: #03a9f4">
+                <a href="/Tags/建站/" style="color: #00a596">
                     建站
                 </a>
             </span>
@@ -148,7 +162,7 @@
 <footer id="footer">
     <div class="footer-wrap">
         <div>
-            © 2021 - 2022 ACのSite
+            © 2021 - 2022 AC的小窝
             <span class="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
