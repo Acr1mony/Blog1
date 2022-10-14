@@ -150,7 +150,7 @@
             
             <span class="tag">
                 
-                <a href="/Tags/建站/" style="color: #00a596">
+                <a href="/Tags/建站/" style="color: #00bcd4">
                     建站
                 </a>
             </span>
@@ -178,6 +178,10 @@
 <h2 id="2-Cloudflare配置时忘记添加解析"><a href="#2-Cloudflare配置时忘记添加解析" class="headerlink" title="2.Cloudflare配置时忘记添加解析"></a>2.Cloudflare配置时忘记添加解析</h2><p>　　同样也是一个很愚蠢的错误，我的腾讯云服务器更改DNS服务器到Cloudflare后，在Cloudflare忘记添加从本域名到托管静态网站Netlify的CRANE域名转发，导致我自己感觉配置好了的服务却<strong>无法访问进入网站</strong>。这首先是因为在添加进Cloudflare时，网站的自动解析没有检测到我在原服务商的转发；其次就是因为我对这种CDN服务的原理理解模糊，才出现这种低级的错误。</p>
 <h2 id="3-头像链接超时导致网站访问速度慢"><a href="#3-头像链接超时导致网站访问速度慢" class="headerlink" title="3.头像链接超时导致网站访问速度慢"></a>3.头像链接超时导致网站访问速度慢</h2><p>　　也许这是对于我来说最有技术含量的排障——这一点让我困惑了很久，明明用着<strong>同样的构架</strong>，为什么我的网站进入速度比别人的博客总要<strong>慢不少</strong>？但当我挂上科学上网时，又几乎能秒开网址。刚开始我以为是因为我使用的是免费的Cloudflare加速服务，而别人为此付了费。但后来我打开<strong>开发者工具</strong>，切换到<strong>Network</strong>查看网站资源的调取情况时，发现我使用的argvchs大佬制作的主题中，读取头像调用的是avatar的url，但是在国内访问会出现timed out<strong>超时</strong>的情况，并且此主题下如果<strong>没有完整读取页面会一直在加载界面缓冲</strong>，最后我直接找到ejs源文件对头像的读取url进行了修改，使用了便宜的好用的付费图床<strong>去不图床</strong>，终于解决了这个<strong>严重影响网站访问</strong>的问题。</p>
 <p><font size="4">　　对于我来说，想要说的话不是这一篇文章就能写完，但可能大多都是我的抱怨之言吧。不过总而总之，这个博客也是能顺利的访问和发布内容了。其实我并没有什么资格能够做知识输出，所以非常感谢屏幕前的你能够耐心地看完这篇文章，<font color="red">非常感谢。</font></font></p>
+<hr>
+<p>　　以下内容更新于20221014，特别提到由Cloudflare提供的CDN服务。</p>
+<p>　　在刚建站的世界挂上由Cloudflare提供的服务确实对网站起到了一定的加速效果。但是大约从10月开始，我发现网站访问的速度变慢了，在更换DNS和对网站进行响应测试的过程中，发现Cloudflare反而对访问网站有一定减速，故弃用此服务转而采用Netlify自带的DNS服务。截止20221014日，本站的访问速度勉强舒适，想念原来有香港服务器的日子了。</p>
+<p>　　并且通过主机MX解析，域名已经能够提供电子邮件服务，于是我给自己开了一个邮箱<a href="mailto:&#108;&#97;&#x63;&#64;&#x61;&#99;&#x72;&#49;&#109;&#x2e;&#x63;&#x6f;&#109;">&#108;&#97;&#x63;&#64;&#x61;&#99;&#x72;&#49;&#109;&#x2e;&#x63;&#x6f;&#109;</a>，如果收到您的邮件我会非常开心！</p>
 
     </div>
     
@@ -229,10 +233,4 @@ setInterval("createtime()",250);
         
 
     </body>
-
-    <!--动态线条背景-->
-<script type="text/javascript"
-color="245,212,200" opacity='0.4' zIndex="-1" count="80" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-</script>
-
 </html>

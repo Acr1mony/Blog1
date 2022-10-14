@@ -49,10 +49,6 @@ card:
     enable: true
     description: ["物流/摄影/后期/音游"] # You can add more
     icon_links:
-        weibo:
-            name: weibo
-            theme: brands
-            link: https://weibo.com/u/5609582974
         github:
             name: github
             theme: brands
