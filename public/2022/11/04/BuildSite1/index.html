@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>关于网站新构架 我的一点记录 | AC的小窝</title>
+        <title>Windows建站教程丨运用Hexo框架快速建立自己的博客(一) | AC的小窝</title>
         <meta name="author" content="Acr1mony">
         <meta name="description" content="茫茫网络沧海中的一粟">
         <meta name="keywords" content="Acr1mony">
@@ -123,22 +123,22 @@
                         
 <div class="article">
     <div>
-        <h1>关于网站新构架 我的一点记录 </h1>
+        <h1>Windows建站教程丨运用Hexo框架快速建立自己的博客(一) </h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
-            2022/9/4
+            2022/11/4
         </span>
         
         <span class="category">
-            <a href="/Categories/建站/">
+            <a href="/Categories/建站教程/">
                 <span class="icon">
                     <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
-                建站
+                建站教程
             </a>
         </span>
         
@@ -150,8 +150,15 @@
             
             <span class="tag">
                 
-                <a href="/Tags/建站/" style="color: #00a596">
-                    建站
+                <a href="/Tags/建站教程/" style="color: #03a9f4">
+                    建站教程
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/Tags/Hexo/" style="color: #ff7d73">
+                    Hexo
                 </a>
             </span>
             
@@ -159,30 +166,57 @@
         
     </div>
     <div class="content" v-pre>
-        <center><img src="https://bu.dusays.com/2022/09/05/6314dd6226c5e.jpg"></center>
-
-<br>
-　　这次没有继续沿用之前买的香港服务器，虽然有一台服务器是极好的，但是对于学生来说，似乎没有这么多财力去支持自己维持服务器。
-
-
-<center>于是，我选用了一种便宜的、更加适合我的博客建站结构。</center>
-
-<center>Netlify+Github+Cloudflare</center>
-
-<center>这应该是我建立博客的终极解决方案了。</center>
-
-<center>优点：“便宜、本地化编辑、锻炼代码能力”</center><center>缺点：“复杂、可视化程度低、访问稍慢”</center>
-
-<p>　　回顾一下我在建站当中遇到的困难，犯了很多简单的错，也学到了很多东西：</p>
-<h2 id="1-config配置时，冒号后忘记添加空格导致识别错误"><a href="#1-config配置时，冒号后忘记添加空格导致识别错误" class="headerlink" title="1.config配置时，冒号后忘记添加空格导致识别错误"></a>1.config配置时，冒号后忘记添加空格导致识别错误</h2><p>　　这是我<strong>最简单</strong>的错误，也是出现<strong>最多次</strong>的错误。其实不止是在Hexo的config配置文件中，写.ejs的网页文件中也出现了同样的问题，所以说，代码是需要<strong>严肃对待</strong>的，一个空格没有导致格式对不上都不行。</p>
-<h2 id="2-Cloudflare配置时忘记添加解析"><a href="#2-Cloudflare配置时忘记添加解析" class="headerlink" title="2.Cloudflare配置时忘记添加解析"></a>2.Cloudflare配置时忘记添加解析</h2><p>　　同样也是一个很愚蠢的错误，我的腾讯云服务器更改DNS服务器到Cloudflare后，在Cloudflare忘记添加从本域名到托管静态网站Netlify的CRANE域名转发，导致我自己感觉配置好了的服务却<strong>无法访问进入网站</strong>。这首先是因为在添加进Cloudflare时，网站的自动解析没有检测到我在原服务商的转发；其次就是因为我对这种CDN服务的原理理解模糊，才出现这种低级的错误。</p>
-<h2 id="3-头像链接超时导致网站访问速度慢"><a href="#3-头像链接超时导致网站访问速度慢" class="headerlink" title="3.头像链接超时导致网站访问速度慢"></a>3.头像链接超时导致网站访问速度慢</h2><p>　　也许这是对于我来说最有技术含量的排障——这一点让我困惑了很久，明明用着<strong>同样的构架</strong>，为什么我的网站进入速度比别人的博客总要<strong>慢不少</strong>？但当我挂上科学上网时，又几乎能秒开网址。刚开始我以为是因为我使用的是免费的Cloudflare加速服务，而别人为此付了费。但后来我打开<strong>开发者工具</strong>，切换到<strong>Network</strong>查看网站资源的调取情况时，发现我使用的argvchs大佬制作的主题中，读取头像调用的是avatar的url，但是在国内访问会出现timed out<strong>超时</strong>的情况，并且此主题下如果<strong>没有完整读取页面会一直在加载界面缓冲</strong>，最后我直接找到ejs源文件对头像的读取url进行了修改，使用了便宜的好用的付费图床<strong>去不图床</strong>，终于解决了这个<strong>严重影响网站访问</strong>的问题。</p>
-<p><font size="4">　　对于我来说，想要说的话不是这一篇文章就能写完，但可能大多都是我的抱怨之言吧。不过总而总之，这个博客也是能顺利的访问和发布内容了。其实我并没有什么资格能够做知识输出，所以非常感谢屏幕前的你能够耐心地看完这篇文章，<font color="red">非常感谢。</font></font></p>
-<hr>
-<p>　　以下内容更新于20221014，特别提到由Cloudflare提供的CDN服务。</p>
-<p>　　在刚建站的世界挂上由Cloudflare提供的服务确实对网站起到了一定的加速效果。但是大约从10月开始，我发现网站访问的速度变慢了，在更换DNS和对网站进行响应测试的过程中，发现Cloudflare反而对访问网站有一定减速，故弃用此服务转而采用Netlify自带的DNS服务。截止20221014日，本站的访问速度勉强舒适，想念原来有香港服务器的日子了。</p>
-<p>　　并且通过主机MX解析，域名已经能够提供电子邮件服务，于是我给自己开了一个邮箱<a href="mailto:&#108;&#x61;&#99;&#x40;&#97;&#x63;&#114;&#x31;&#109;&#x2e;&#x63;&#x6f;&#109;">&#108;&#x61;&#99;&#x40;&#97;&#x63;&#114;&#x31;&#109;&#x2e;&#x63;&#x6f;&#109;</a>，如果收到您的邮件我会非常开心！</p>
-
+        <h4 id="一、安装基础程序"><a href="#一、安装基础程序" class="headerlink" title="一、安装基础程序"></a><center>一、安装基础程序</center></h4><p>（一）Node.js</p>
+<blockquote>
+<p>Official Download Site：<a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js丨https://nodejs.org/</a></p>
+</blockquote>
+<p>（二）Git</p>
+<blockquote>
+<p>Official Download Site：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git丨https://gic-scm.com/</a></p>
+</blockquote>
+<h4 id="二、安装基础Hexo框架"><a href="#二、安装基础Hexo框架" class="headerlink" title="二、安装基础Hexo框架"></a><center>二、安装基础Hexo框架</center></h4><p>（一）将Hexo安装到全局：</p>
+<p>创建一个用来放置博客文件的空文件夹，并在里面空白处右击，点击Git Bash Here，Git会自动在本目录下处理命令。</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb1447.png" alt="gitbashhere.png"></p>
+<p>在Git中输入Hexo框架安装指令：</p>
+<p><code>npm install hexo-cli -g</code></p>
+<p>如果等候许久未反应，则需要在Git中输入命令，切换国内淘宝镜像（如果上一步还在处理中，需要在Git中输入Ctrl+C组合键结束）：</p>
+<p><code>npm config set registry https://registry.npm.taobao.org</code></p>
+<p>使用</p>
+<p><code>npm config get registry</code></p>
+<p>观察返回信息，验证镜像是否切换成功，成功后再输入Hexo安装指令以安装</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb6ffc.png" alt="jingxiang.png"></p>
+<p>使用</p>
+<p><code>hexo -v</code></p>
+<p>观察返回信息版本号，验证Hexo是否安装成功</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffac795.png" alt="hexoyanzheng.png"></p>
+<p>（二）新建安装博客的文件夹并安装框架</p>
+<p>使用命令</p>
+<p><code>hexo init yourblogname</code></p>
+<p>其中yourblogname修改为你希望博客文件存储的文件夹名字</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb6f10.png" alt="hexoinit.png"></p>
+<p>成功安装后，刚创建好的文件夹根目录里多出了如下文件</p>
+<blockquote>
+<p>&#x2F;.github<br>&#x2F;node_modules<br>&#x2F;scaffolds<br>&#x2F;source—-资源文件夹<br>&#x2F;themes—-主题文件夹<br>.gitignore<br>_config.landscape.yml<br>_config.yml—-配置文件<br>package.json<br>package-lock</p>
+</blockquote>
+<p>我们在这个文件夹的空白处右击，点击Git Bash Here，输入指令安装npm：</p>
+<p><code>npm install</code></p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb483d.png" alt="installnpm.png"></p>
+<p>于是我们的站点就安装完毕了！我们输入如下指令将其在本地启动：</p>
+<p><code>hexo server(或hexo s)</code></p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb0ec4.png" alt="hexo server.png"></p>
+<p>然后我们在浏览器地址栏中输入</p>
+<p><code>localhost:4000</code></p>
+<p>即可进入本地站点！</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffe3269.png" alt="hexoblog.png"></p>
+<p>我们可以看到目前我们的网站除了基础框架和自动创建的Hello World外，没有其他内容，但是我们不必心急写内容，先要发布到互联网上才能确保能被人看到，所以下一篇我们将会学习：</p>
+<blockquote>
+<p>如何将Hexo框架的服务通过Netlify部署到互联网，使其可被访问</p>
+<blockquote>
+<p>准备一个Github账号<br>准备一个Netlify账号<br>如需自定网址则需在服务商购买域名</p>
+</blockquote>
+</blockquote>
+<p><img src="https://bu.dusays.com/2022/09/05/6314dd6226c5e.jpg" alt="logo"></p>
+<p align="right">Edited by Acr1mony</p>
     </div>
     
 </div>
