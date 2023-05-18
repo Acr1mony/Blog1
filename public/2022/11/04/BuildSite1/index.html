@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="cn">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>Windows建站教程丨运用Hexo框架快速建立自己的博客(一) | AC的小窝</title>
+        <meta name="author" content="Acr1mony">
+        <meta name="description" content="茫茫网络沧海中的一粟">
+        <meta name="keywords" content="Acr1mony">
+        <link rel="icon" href="">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    <body>
+        <div id="pagecontent">
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">AC的小窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-file fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://tools.acr1m.com/">
+            <i class="fa-solid fa-wrench fa-fw"></i>
+            <span>&ensp;Tools</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;AC的小窝</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-file fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://tools.acr1m.com/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-wrench fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">Tools</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>Windows建站教程丨运用Hexo框架快速建立自己的博客(一) </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/11/4
+        </span>
+        
+        <span class="category">
+            <a href="/Categories/建站教程/">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                建站教程
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/Tags/建站教程/" style="color: #03a9f4">
+                    建站教程
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/Tags/Hexo/" style="color: #ff7d73">
+                    Hexo
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <h4 id="一、安装基础程序"><a href="#一、安装基础程序" class="headerlink" title="一、安装基础程序"></a><center>一、安装基础程序</center></h4><p>（一）Node.js</p>
+<blockquote>
+<p>Official Download Site：<a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js丨https://nodejs.org/</a></p>
+</blockquote>
+<p>（二）Git</p>
+<blockquote>
+<p>Official Download Site：<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git丨https://gic-scm.com/</a></p>
+</blockquote>
+<h4 id="二、安装基础Hexo框架"><a href="#二、安装基础Hexo框架" class="headerlink" title="二、安装基础Hexo框架"></a><center>二、安装基础Hexo框架</center></h4><p>（一）将Hexo安装到全局：</p>
+<p>创建一个用来放置博客文件的空文件夹，并在里面空白处右击，点击Git Bash Here，Git会自动在本目录下处理命令。</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb1447.png" alt="gitbashhere.png"></p>
+<p>在Git中输入Hexo框架安装指令：</p>
+<p><code>npm install hexo-cli -g</code></p>
+<p>如果等候许久未反应，则需要在Git中输入命令，切换国内淘宝镜像（如果上一步还在处理中，需要在Git中输入Ctrl+C组合键结束）：</p>
+<p><code>npm config set registry https://registry.npm.taobao.org</code></p>
+<p>使用</p>
+<p><code>npm config get registry</code></p>
+<p>观察返回信息，验证镜像是否切换成功，成功后再输入Hexo安装指令以安装</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb6ffc.png" alt="jingxiang.png"></p>
+<p>使用</p>
+<p><code>hexo -v</code></p>
+<p>观察返回信息版本号，验证Hexo是否安装成功</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffac795.png" alt="hexoyanzheng.png"></p>
+<p>（二）新建安装博客的文件夹并安装框架</p>
+<p>使用命令</p>
+<p><code>hexo init yourblogname</code></p>
+<p>其中yourblogname修改为你希望博客文件存储的文件夹名字</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb6f10.png" alt="hexoinit.png"></p>
+<p>成功安装后，刚创建好的文件夹根目录里多出了如下文件</p>
+<blockquote>
+<p>&#x2F;.github<br>&#x2F;node_modules<br>&#x2F;scaffolds<br>&#x2F;source—-资源文件夹<br>&#x2F;themes—-主题文件夹<br>.gitignore<br>_config.landscape.yml<br>_config.yml—-配置文件<br>package.json<br>package-lock</p>
+</blockquote>
+<p>我们在这个文件夹的空白处右击，点击Git Bash Here，输入指令安装npm：</p>
+<p><code>npm install</code></p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb483d.png" alt="installnpm.png"></p>
+<p>于是我们的站点就安装完毕了！我们输入如下指令将其在本地启动：</p>
+<p><code>hexo server(或hexo s)</code></p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffb0ec4.png" alt="hexo server.png"></p>
+<p>然后我们在浏览器地址栏中输入</p>
+<p><code>localhost:4000</code></p>
+<p>即可进入本地站点！</p>
+<p><img src="https://bu.dusays.com/2022/11/04/6364feffe3269.png" alt="hexoblog.png"></p>
+<p>我们可以看到目前我们的网站除了基础框架和自动创建的Hello World外，没有其他内容，但是我们不必心急写内容，先要发布到互联网上才能确保能被人看到，所以下一篇我们将会学习：</p>
+<blockquote>
+<p>如何将Hexo框架的服务通过Netlify部署到互联网，使其可被访问</p>
+<blockquote>
+<p>准备一个Github账号<br>准备一个Netlify账号<br>如需自定网址则需在服务商购买域名</p>
+</blockquote>
+</blockquote>
+<p><img src="https://bu.dusays.com/2022/09/05/6314dd6226c5e.jpg" alt="logo"></p>
+<p align="right">Edited by Acr1mony</p>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2021 - 2022 AC的小窝
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Acr1mony
+        </div>
+        <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+        var now = new Date(); 
+        function createtime() { 
+        var grt= new Date("09/03/2022 20:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+setInterval("createtime()",250);
+</script>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a><br>Edit By <a target="_blank" rel="noopener" href="https://github.com/Acr1mony/">Acr1mony</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+    </body>
+</html>
